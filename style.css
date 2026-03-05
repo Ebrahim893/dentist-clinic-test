@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", sans-serif;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("imgs/panner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+    padding: 30px 0;
+    background-color: #10465d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+}
+
+header .logo img{
+    width: 60px;
+}
+
+header .logo h2{
+    color: #bce2df;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header nav ul li{
+    display: inline-block;
+    margin: 30px;
+}
+
+header nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1.3px;
+    font-size: 17px;
+    transition: ease 0.4s;
+    -webkit-transition: ease 0.4s;
+    -moz-transition: ease 0.4s;
+    -ms-transition: ease 0.4s;
+    -o-transition: ease 0.4s;
+}
+
+header nav ul li a:hover{
+    color: #bce2df;
+}
+main{
+    padding-left: 60px;
+    padding-bottom: 50px;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main h1{
+    color: #10465d;
+    font-size: 48px;
+    font-weight: 900;
+    margin-bottom: 35px;
+}
+
+main p{
+    color: #567382;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 25px 0px 40px;
+    letter-spacing: 1.3px;
+}
+
+main a{
+    width: 120px;
+    background-color: #10465d;
+    padding: 15px;
+    align-items: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    text-decoration: none;
+    margin-top: 25px 0;
+    letter-spacing: 1.2px;
+    font-weight: 600;
+    transition: transform ease 0.3s;
+    -webkit-transition: transform ease 0.3s;
+    -moz-transition: transform ease 0.3s;
+    -ms-transition: transform ease 0.3s;
+    -o-transition: transform ease 0.3s;
+}
+
+main a:hover{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    background-color: #567382;
+    color: #bce2df;
+}
