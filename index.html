@@ -1,107 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>GlowSmile - Dental Care</title>
 </head>
-
 <body>
+
     <header>
         <div class="logo">
             <img src="imgs/logoo.png" alt="logo">
             <h2>GlowSmile</h2>
         </div>
-        <Nav>
-            <ul>
+
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <nav>
+            <ul class="nav-list">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about-us">About Us</a></li>
-                <li><a href="#servies">Servies</a></li>
-                <li><a href="">Doctors</a></li>
-                <li><a href="">Contact Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#doctors">Doctors</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
-        </Nav>
+        </nav>
     </header>
+
     <main id="home">
         <div class="home">
-            <h1>
-                Your Smile Starts Here
-            </h1>
-            <p>
-                Professional Dental Care With The Latest Tecnhnology
-            </p>
-            <a href="">Book Now</a>
-        </div>
-        <div class="img">
-            <!-- <img src="imgs/ppp.jpeg" alt="logo"> -->
+            <h1>Your Smile Starts Here</h1>
+            <p>Professional Dental Care With The Latest Technology</p>
+            <a href="#contact">Book Now</a>
         </div>
     </main>
+
     <section class="About-Us" id="about-us">
         <h2>About Us</h2>
         <div class="information">
             <div class="p">
-
                 <p>Welcome to our Dental Care Center. We are dedicated to providing high-quality dental services in a
                     comfortable and friendly environment. Our team of experienced dentists and specialists works hard to
                     ensure that every patient receives the best care using modern equipment and advanced techniques.
                     Our goal is to help our patients achieve healthy and beautiful smiles through professional
-                    treatment,
-                    preventive care, and personalized attention. We believe that every smile matters, and we strive to
-                    make
-                    your dental experience safe, easy, and stress-free.</p>
+                    treatment, preventive care, and personalized attention.</p>
             </div>
             <div class="image">
-                <img src="imgs/drr.jpeg" alt="logo">
+                <img src="imgs/drr.jpeg" alt="Dentist">
             </div>
         </div>
     </section>
-    <section class="Servies" id="servies">
+
+    <section class="Services" id="services">
         <div class="h2">
-            <h2>servies</h2>
+            <h2>Our Services</h2>
         </div>
         <div class="content">
             <div>
-                <img src="imgs/witinning.jpeg" alt="logo">
+                <img src="imgs/witinning.jpeg" alt="Teeth Whitening">
                 <h3>Teeth Whitening</h3>
                 <p>Teeth whitening is a cosmetic dental treatment that removes stains and discoloration from teeth,
-                    giving you a brighter and more attractive smile</p>
+                    giving you a brighter and more attractive smile.</p>
             </div>
             <div>
-                <img src="imgs/rotes.jpeg" alt="">
+                <img src="imgs/rotes.jpeg" alt="Root Canal">
                 <h3>Root Canal Treatment</h3>
                 <p>Root canal treatment is performed to remove infected pulp from inside the tooth, clean the canals,
-                    and seal them to save the natural tooth and relieve pain</p>
+                    and seal them to save the natural tooth.</p>
             </div>
             <div>
-                <img src="imgs/smilee.jpg" alt="">
+                <img src="imgs/smilee.jpg" alt="Orthodontics">
                 <h3>Orthodontics</h3>
                 <p>Orthodontic treatment helps straighten teeth and correct bite problems using braces or clear
                     aligners, improving both function and appearance.</p>
             </div>
             <div>
-                <img src="imgs/implants.jpeg" alt="">
+                <img src="imgs/implants.jpeg" alt="Dental Implant">
                 <h3>Dental Implant</h3>
-                <p>Dental implants are a modern solution to replace missing teeth. A titanium implant is placed in the
-                    jawbone to support a natural-looking crown, restoring both function and appearance</p>
+                <p>Dental implants are a modern solution to replace missing teeth using a titanium implant to support a
+                    natural-looking crown.</p>
             </div>
             <div>
-                <img src="imgs/child.jpeg" alt="">
+                <img src="imgs/child.jpeg" alt="Pediatric">
                 <h3>Pediatric Dentistry</h3>
-                <p>Pediatric dentistry focuses on the oral health of children from infancy through adolescence. It
-                    includes preventive care, regular check-ups, and teaching children healthy habits to keep their
-                    teeth strong and clean.</p>
+                <p>Focuses on the oral health of children from infancy through adolescence, teaching children healthy
+                    habits for strong teeth.</p>
             </div>
             <div>
-                <img src="imgs/x-ray.jpeg" alt="">
+                <img src="imgs/x-ray.jpeg" alt="X-Ray">
                 <h3>Dental X-Ray</h3>
-                <p>Dental X-rays help dentists detect problems that cannot be seen with the naked eye, such as cavities,
-                    bone loss, and impacted teeth. They are an important tool for accurate diagnosis and treatment
-                    planning</p>
+                <p>Dental X-rays help dentists detect problems that cannot be seen with the naked eye, such as cavities
+                    and bone loss.</p>
             </div>
         </div>
     </section>
-</body>
 
+    <script>
+        const menu = document.querySelector('#mobile-menu');
+        const menuLinks = document.querySelector('.nav-list');
+
+        menu.addEventListener('click', function() {
+            menuLinks.classList.toggle('active'); 
+            menu.classList.toggle('is-active'); 
+        });
+
+        document.querySelectorAll('.nav-list a').forEach(link => {
+            link.addEventListener('click', () => {
+                menuLinks.classList.remove('active');
+                menu.classList.remove('is-active');
+            });
+        });
+    </script>
+
+</body>
 </html>
