@@ -200,6 +200,76 @@ nav ul li a:hover {
     border-radius: 10px;
     margin-bottom: 15px;
 }
+.doctors {
+    padding: 80px 10%;
+    background: #fff; /* خلفية بيضاء عشان تفرق عن سكشن الخدمات اللي قبله */
+}
+
+.doctors h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #0056b3;
+    font-size: 2.5rem;
+}
+
+.doctors-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.doctors-content div {
+    background: #fcfcfc;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    transition: 0.4s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+.doctors-content div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    border-color: #00b4d8;
+}
+
+.doctors-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* صور دائرية للأطباء بتدي شكل احترافي أكتر */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #00b4d8;
+    padding: 3px;
+    transition: 0.3s;
+}
+
+.doctors-content div:hover img {
+    transform: scale(1.05);
+    border-color: #0056b3;
+}
+
+.doctors-content h3 {
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.3rem;
+}
+
+.doctors-content h5 {
+    color: #00b4d8;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.doctors-content p {
+    font-size: 0.9rem;
+    color: #777;
+    line-height: 1.5;
+}
 
 @media (max-width: 768px) {
     header {
@@ -239,5 +309,8 @@ nav ul li a:hover {
 
     .home h1 {
         font-size: 2.2rem;
+    }
+    .doctors {
+        padding: 60px 5%;
     }
 }
